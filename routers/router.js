@@ -13,6 +13,7 @@ var temperature = require('./temperature')
 var humidity = require('./humidity')
 var params = require('./params')
 var system = require('./system')
+var alarm = require('./alarm')
 
 router.use((req, res, next) => {
     next()
@@ -29,5 +30,6 @@ router.use(temperature)
 router.use(humidity)
 router.use(params)
 router.use(system)
+router.use(alarm)
 
 module.exports = router
