@@ -11,7 +11,7 @@ const api = apiAdapter(process.env.RECEIVER_URL)
 
 router.get('/ping', (req, res) => {
     api
-    .get(req.path, httpConfig(req))
+    .get(req.path)
     .then(resp => res.send(resp.data))
     .catch(err => res.send(err))
 })
